@@ -1,0 +1,12 @@
+<section class="page-wrapper">
+  <app-big-banner [title]="'News'"></app-big-banner>
+
+  <ng-container *ngIf="!loading; else loadingMessage">
+    <app-news-tile [items]="articles"></app-news-tile>
+  </ng-container>
+  <app-news-tile [items]="articles"></app-news-tile>
+</section>
+
+<ng-template #loadingMessage>
+  <h3>Please wait, loading...</h3>
+</ng-template>
