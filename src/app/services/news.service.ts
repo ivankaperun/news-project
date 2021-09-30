@@ -15,7 +15,7 @@ export class NewsService {
     return this.http
       .get(
         environment.newsApi +
-          '?q=tesla&from=2021-08-29&sortBy=publishedAt&apiKey=' +
+          '?country=us&category=business&apiKey=' +
           this.apiKey
       )
       .pipe(
